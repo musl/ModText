@@ -47,6 +47,11 @@ If I don't get burnt out dealing with:
 - [pathological pragmatism](https://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Time.html)
 - [patronizing and condescending themes](https://developer.garmin.com/connect-iq/programmers-guide/monkey-c/)
 - The myriad [monkey](https://developer.garmin.com/connect-iq/programmers-guide/shareable-libraries/) [metaphors](https://developer.garmin.com/connect-iq/programmers-guide/how-to-test/#runnoevil)
+ 
+TL;DR:
+> "Stop taking my hand!"
+>
+> -- Rey
 
 I plan on adding:
 
@@ -56,10 +61,6 @@ I plan on adding:
 - I18N
 - Bluetooth Connection Indicator
 - Build Support for Similarly Featured Round Watches
- 
-> "Stop taking my hand!"
->
-> -- Rey
 
 ## Font
 This project uses the Adobe Fonts [Source Code Pro](https://github.com/adobe-fonts/source-code-pro) font re-rendered
