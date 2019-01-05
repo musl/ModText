@@ -29,8 +29,8 @@ It's a graph of modular arithmetic.
 
 ## ToDo:
 If I don't get burnt out dealing with:
-- [sparse libraries](https://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Math.html) ,
-- [inscrutiable decisions](https://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Lang.html#format) (why not re-use `sprintf`!?!?), and 
+- [sparse libraries](https://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Math.html)
+- [inscrutiable decisions](https://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Lang.html#format) (why not re-use `sprintf`)
 - [pathological pragmatism](https://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Time.html)
 - [patronizing and condescending themes](https://developer.garmin.com/connect-iq/programmers-guide/monkey-c/)
 - the myriad [monkey](https://developer.garmin.com/connect-iq/programmers-guide/shareable-libraries/) [metaphors](https://developer.garmin.com/connect-iq/programmers-guide/how-to-test/#runnoevil)
