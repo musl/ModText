@@ -1,0 +1,10 @@
+<resources>
+    <string id="AppName">DataFace</string>
+    <string id="Author">Mike Hix</string>
+    <string id="Email">m@hix.io</string>
+    
+    <fonts>
+    	<font id="SCPS32A" antialias="true" filename="fonts/SourceCodePro-SemiBold-32px.fnt" />
+    	<font id="SCPS64N" antialias="true" filename="fonts/SourceCodePro-SemiBold-64px.fnt" filter="0123456789:- " />
+    </fonts>
+</resources>
