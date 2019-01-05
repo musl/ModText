@@ -47,9 +47,6 @@ If I don't get burnt out dealing with:
 - [patronizing and condescending themes](https://developer.garmin.com/connect-iq/programmers-guide/monkey-c/)
 - The myriad [monkey](https://developer.garmin.com/connect-iq/programmers-guide/shareable-libraries/) [metaphors](https://developer.garmin.com/connect-iq/programmers-guide/how-to-test/#runnoevil)
 
-> "Stop taking my hand!"
-> -- Rey
-
 I plan on adding:
 
 - Color Theme Support
@@ -59,3 +56,7 @@ I plan on adding:
 - Bluetooth Connection Indicator
 - Build Support for Similarly Featured Round Watches
  
+> "Stop taking my hand!"
+>
+> -- Rey
+
