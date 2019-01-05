@@ -30,7 +30,7 @@ minute.
 
 ## Installing
 You'll need to copy the file [build/ModText.prg](build/ModText.prg) to
-the folder `GARMIN/Apps` on your watch. To do this, make sure it's still
+the directory `GARMIN/Apps` on your watch. To do this, make sure it's still
 on the default setting for USB connections: MTP. Then follow a [guide](https://support.google.com/android/answer/9064445?hl=en) 
 to get connected to your device. Once connected, drag the file into the
 directory listed above, disconnect the watch, and select my watch face
