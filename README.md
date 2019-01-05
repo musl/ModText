@@ -61,8 +61,7 @@ I plan on adding:
 > -- Rey
 
 ## Font
-This project uses the Adobe Fonts (Source Code
-Pro)[https://github.com/adobe-fonts/source-code-pro] font re-rendered
+This project uses the Adobe Fonts [Source Code Pro](https://github.com/adobe-fonts/source-code-pro) font re-rendered
 into bitmap form.
 
 ## Licensing
