@@ -25,7 +25,8 @@ The field contents in order from top to bottom, left to right are:
 None yet.
 
 ## Background
-It's a graph of modular arithmetic.
+It's an arguably pretty graph of modular arithmetic based on the current
+minute.
 
 ## ToDo:
 If I don't get burnt out dealing with:
