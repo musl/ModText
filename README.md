@@ -1,5 +1,5 @@
 # ModText
-A Garmin ConnectIQ watch face.
+A [Garmin ConnectIQ](http://developer.garmin.com/connect-iq) watch face.
 
 ## What?
 This watch face builds for the Fenix 5x Plus. It's my first watch face
@@ -28,13 +28,19 @@ None yet.
 It's a graph of modular arithmetic.
 
 ## ToDo:
-If I don't get burnt out dealing with the patronizing, sparse, and
-inscrutiably pragmatic way the libraries are written or the
-condescending monkey metaphors, or the lack of decent I plan on adding:
+If I don't get burnt out dealing with:
+- [sparse libraries](https://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Math.html) ,
+- [inscrutiable decisions](https://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Lang.html#format) (why not re-use `sprintf`!?!?), and 
+- [pathological pragmatism](https://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Time.html)
+- [patronizing and condescending themes](https://developer.garmin.com/connect-iq/programmers-guide/monkey-c/)
+- the myriad [monkey](https://developer.garmin.com/connect-iq/programmers-guide/shareable-libraries/) [metaphors](https://developer.garmin.com/connect-iq/programmers-guide/how-to-test/#runnoevil)
+
+... I plan on adding:
 
 - Color Theme Support
 - Customizable Fields, Units, Formats, & Icons
 - Weather Provider Support
 - I18N
 - Bluetooth Connection Indicator
+- Build Support for Similarly Featured Round Watches
  
