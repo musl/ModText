@@ -60,3 +60,12 @@ I plan on adding:
 >
 > -- Rey
 
+## Font
+This project uses the Adobe Fonts (Source Code
+Pro)[https://github.com/adobe-fonts/source-code-pro] font re-rendered
+into bitmap form.
+
+## Licensing
+See [LICENSE](LICENSE) for the portions of code I wrote, whatever
+draconian chit Garmin barfed up for the rest.
+
