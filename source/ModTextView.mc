@@ -9,7 +9,7 @@ using Toybox.Time.Gregorian;
 using Toybox.Time;
 using Toybox.WatchUi;
 
-class DataFaceView extends WatchUi.WatchFace {
+class ModTextView extends WatchUi.WatchFace {
 
 	const halfPi = Math.PI / 2.0;
 	const twoPi = Math.PI * 2.0;
@@ -90,24 +90,8 @@ class DataFaceView extends WatchUi.WatchFace {
         dc.clearClip();
 		dc.setColor(0, 0);
 		dc.fillRectangle(0, 0, width, height);
-
-		var n, x1, x2, y1, y2;
-		var m = 120;
-		var p = 2.0 * Math.PI / m;
 		
-		dc.setPenWidth(1);
-		for(var i = 0; i < m; i++) {
-			n = time.min * i % m;
-			
-			x1 = centerX + centerX * Math.cos(i * p);	
-			y1 = centerY + centerY * Math.sin(i * p);	
-
-			x2 = centerX + centerX * Math.cos(n * p);
-			y2 = centerY + centerY * Math.sin(n * p);
-
-			dc.setColor(0x000030, Graphics.COLOR_TRANSPARENT);
-			dc.drawLine(x1, y1, x2, y2);
-		}
+		drawModLines(dc);
 
 		drawTime(dc);
 
@@ -148,7 +132,7 @@ class DataFaceView extends WatchUi.WatchFace {
 			textCenterY - 78,
 			fontSmall,
 			Lang.format("$1$% $2$$3$", [
-				(actInfo.activeMinutesWeek.total.toDouble() / actInfo.activeMinutesWeekGoal).format("%03d"),
+				((actInfo.activeMinutesWeek.total.toDouble() / actInfo.activeMinutesWeekGoal) * 100).format("%03d"),
 				distance.format("%3.1f"),
 				distanceUnit
 			]),
@@ -193,7 +177,7 @@ class DataFaceView extends WatchUi.WatchFace {
 			textCenterY + 51,
 			fontSmall,
 			Lang.format("$1$% $2$ $3$\u2665", [
-				(actInfo.steps.toDouble() / actInfo.stepGoal).format("%03d"),
+				((actInfo.steps.toDouble() / actInfo.stepGoal) * 100).format("%03d"),
 				activitySymbols[actInfo.moveBarLevel],
 				(heartRate.heartRate != ActivityMonitor.INVALID_HR_SAMPLE && heartRate.heartRate > 0) ?
 					heartRate.heartRate.format("%03d") :
@@ -219,9 +203,6 @@ class DataFaceView extends WatchUi.WatchFace {
     
     // dc.clearClip() doesn't work here; do it at the top of each minute update.
     function onPartialUpdate(dc) {
-        time = Gregorian.info(Time.now(), Time.FORMAT_SHORT);
-        hourOffset = (!System.getDeviceSettings().is24Hour && time.hour > 12) ? -12 : 0;
-
 		dc.setClip(centerX + 61, textCenterY - 15, 56, 35);
 		dc.setColor(0, 0);
 		dc.clear();
@@ -230,6 +211,9 @@ class DataFaceView extends WatchUi.WatchFace {
     }
     
     function drawTime(dc) {
+        time = Gregorian.info(Time.now(), Time.FORMAT_SHORT);
+        hourOffset = (!System.getDeviceSettings().is24Hour && time.hour > 12) ? -12 : 0;
+
 		dc.setColor(0x40ff40, Graphics.COLOR_TRANSPARENT);
 		dc.drawText(
 			centerX,
@@ -243,6 +227,28 @@ class DataFaceView extends WatchUi.WatchFace {
 			Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER
 		);
     }
+
+	function drawModLines(dc) {
+		var n, x1, x2, y1, y2;
+		var m = 60;
+		var p = 2.0 * Math.PI / m;
+		var r = (centerX < centerY ? centerX : centerY) - 2;
+		
+		dc.setPenWidth(1);
+		for(var i = 0; i < m; i++) {
+			n = (time.min + 2) * i % m;
+			
+			x1 = centerX + r * Math.cos(i * p);	
+			y1 = centerY + r * Math.sin(i * p);	
+
+			x2 = centerX + r * Math.cos(n * p);
+			y2 = centerY + r * Math.sin(n * p);
+
+			dc.setColor(0x000030, Graphics.COLOR_TRANSPARENT);
+			dc.drawLine(x1, y1, x2, y2);
+		}
+	}
+
 
     // Called when this View is removed from the screen. Save the
     // state of this View here. This includes freeing resources from

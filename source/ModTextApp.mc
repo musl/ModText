@@ -1,7 +1,7 @@
 using Toybox.Application;
 using Toybox.WatchUi;
 
-class DataFaceApp extends Application.AppBase {
+class ModTextApp extends Application.AppBase {
 
     function initialize() {
         AppBase.initialize();
@@ -17,7 +17,7 @@ class DataFaceApp extends Application.AppBase {
 
     // Return the initial view of your application here
     function getInitialView() {
-        return [ new DataFaceView() ];
+        return [ new ModTextView() ];
     }
 
     // New app settings have been received so trigger a UI update
