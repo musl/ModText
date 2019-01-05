@@ -3,7 +3,7 @@ A [Garmin ConnectIQ](http://developer.garmin.com/connect-iq) watch face.
 
 ## What?
 This watch face builds for the Fenix 5x Plus. It's my first watch face
-written with their awful, invented language.
+written with their invented language.
 
 ## What does it look like?
 ![Screen Shot](screenshot.png)
