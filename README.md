@@ -29,13 +29,24 @@ It's a graph of modular arithmetic.
 
 ## ToDo:
 If I don't get burnt out dealing with:
+
+- Hidden behaviors and a near-complete lack of explanation for every
+	case I've found 
+- Zero support for debugging on-device
+- No way to automatically upload a new app or watch face to a device
+	on build
+- The Simulator failing to behave like the real device
+- Piles of XML
+- Vague and un-helpful compiler errors "no viable alternative at input"
+- Runtime type and array errors
+- Fuzzy source mapping for most errors
 - [sparse libraries](https://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Math.html)
 - [inscrutiable decisions](https://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Lang.html#format) (why not re-use `sprintf`)
 - [pathological pragmatism](https://developer.garmin.com/downloads/connect-iq/monkey-c/doc/Toybox/Time.html)
 - [patronizing and condescending themes](https://developer.garmin.com/connect-iq/programmers-guide/monkey-c/)
-- the myriad [monkey](https://developer.garmin.com/connect-iq/programmers-guide/shareable-libraries/) [metaphors](https://developer.garmin.com/connect-iq/programmers-guide/how-to-test/#runnoevil)
+- The myriad [monkey](https://developer.garmin.com/connect-iq/programmers-guide/shareable-libraries/) [metaphors](https://developer.garmin.com/connect-iq/programmers-guide/how-to-test/#runnoevil)
 
-... I plan on adding:
+I plan on adding:
 
 - Color Theme Support
 - Customizable Fields, Units, Formats, & Icons
