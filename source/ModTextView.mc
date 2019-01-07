@@ -81,6 +81,23 @@ class ModTextView extends WatchUi.WatchFace {
 		temperatureHistory = SensorHistory.getTemperatureHistory(null);
 		temperature = temperatureHistory.next();
 
+		var distanceUnit = "km";
+		var distance = actInfo.distance;
+		switch(settings.distanceUnits) {
+			case System.UNIT_STATUTE:
+				distanceUnit = "mi";
+				distance /= 160934.0;
+				break;
+			case System.UNIT_METRIC:
+				distanceUnit = "km";
+				distance /= 100000.0;
+				break;
+			default:
+				distanceUnit = "km";
+				distance /= 100000.0;
+				break;
+		}
+
 		/*
 		// TODO: MAKE THEMES
 		bg = Application.getApp().getProperty("BackgroundColor");
@@ -108,23 +125,6 @@ class ModTextView extends WatchUi.WatchFace {
 				Graphics.TEXT_JUSTIFY_CENTER
 				);
 
-		var distanceUnit = "km";
-		var distance = actInfo.distance;
-		switch(settings.distanceUnits) {
-			case System.UNIT_STATUTE:
-				distanceUnit = "mi";
-				distance /= 160934.0;
-				break;
-			case System.UNIT_METRIC:
-				distanceUnit = "km";
-				distance /= 100000.0;
-				break;
-			default:
-				distanceUnit = "km";
-				distance /= 100000.0;
-				break;
-		}
-
 		// TODO: find more things to display
 		dc.setColor(0x008000, Graphics.COLOR_TRANSPARENT);
 		dc.drawText(
@@ -132,7 +132,7 @@ class ModTextView extends WatchUi.WatchFace {
 				textCenterY - 78,
 				fontSmall,
 				Lang.format("$1$% $2$$3$", [
-					((actInfo.activeMinutesWeek.total.toDouble() / actInfo.activeMinutesWeekGoal) * 100).format("%03d"),
+					((actInfo.steps.toDouble() / actInfo.stepGoal) * 100).format("%03d"),
 					distance.format("%3.1f"),
 					distanceUnit
 				]),
@@ -177,7 +177,7 @@ class ModTextView extends WatchUi.WatchFace {
 				textCenterY + 51,
 				fontSmall,
 				Lang.format("$1$% $2$ $3$\u2665", [
-					((actInfo.steps.toDouble() / actInfo.stepGoal) * 100).format("%03d"),
+					((actInfo.activeMinutesWeek.total.toDouble() / actInfo.activeMinutesWeekGoal) * 100).format("%03d"),
 					activitySymbols[actInfo.moveBarLevel],
 					(heartRate.heartRate != ActivityMonitor.INVALID_HR_SAMPLE && heartRate.heartRate > 0) ?
 					heartRate.heartRate.format("%03d") :

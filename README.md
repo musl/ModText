@@ -12,14 +12,15 @@ written with their invented language.
 ## Fields
 The field contents in order from top to bottom, left to right are:
 - Altitude in default units
-- % of Active Minutes Goal
+- % of Steps Goal
 - Distance Traveled
 - Day of Week, Date in YYYY-MM-DD Format
 - Local Time in HH:MM:SS (12 or 24 hour)
 - Temperature in default units
 - Battery Percentage, Charging Indicator Triangle, Notification Count
-- % of Steps Goal, Activity Suggestion Icon, Heart Rate in Beats per
-	Minute
+- % of Active Minutes Goal
+- Activity Suggestion Icon
+- Heart Rate in Beats per Minute
 - Barometric Pressure in default units
 
 ## Customization
